@@ -1,25 +1,47 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { deepPurple } from '@material-ui/core/colors';
 
 export default makeStyles((theme) => ({
-  root: {
-    '& .MuiTextField-root': {
-      margin: theme.spacing(1),
-    },
-  },
-  paper: {
-    padding: theme.spacing(2),
-  },
-  form: {
+  appBar: {
+    borderRadius: 15,
+    margin: '30px 0',
     display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '10px 50px',
   },
-  fileInput: {
-    width: '97%',
-    margin: '10px 0',
+  heading: {
+    color: "#BA5BD7",
+    textDecoration: 'none',
   },
-  buttonSubmit: {
-    marginBottom: 10,
+  image: {
+    marginLeft: '12px',
+  },
+  toolbar: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    width: '400px',
+  },
+  profile: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    width: '400px',
+  },
+  userName: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  brandContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  button: {
+    backgroundColor: "#BA5BD7",
+  },
+  purple: {
+    color: theme.palette.getContrastText(deepPurple[500]),
+    backgroundColor: deepPurple[500],
   },
 }));
 //   [theme.breakpoints.down('sm')]: {

@@ -11,9 +11,6 @@ export const getPosts = () => async (dispatch) => {
   } catch (error) {
     console.log(error.message);
   }
-
-
-
 }
 
 export const createPost = (post) => async (dispatch) => {
@@ -47,10 +44,12 @@ export const updatePost = (id, post) => async (dispatch) => {
  }
 
  export const likePost = (id) => async (dispatch) => {
-   try {
-     const { data } = await api.likePost(id);
+   const user = JSON.parse(localStorage.getItem('profile'));
 
-     dispatch({ type: LIKE, payload: data});
+   try {
+     const { data } = await api.likePost(id, user?.token);
+
+     dispatch({ type: LIKE, payload: data });
    } catch (error) {
      console.log(error);
    }
