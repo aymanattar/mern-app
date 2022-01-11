@@ -3,9 +3,9 @@ import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui
 import {GoogleLogin } from 'react-google-login';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
 import Icon from './icon';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import useStyles from './styles'
 import Input from './Input';
 import { signin, signup } from '../../actions/auth';

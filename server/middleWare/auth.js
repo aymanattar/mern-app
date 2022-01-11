@@ -1,8 +1,5 @@
 import jwt from 'jsonwebtoken';
 
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 // user wants to like a post
 // he clicks the like button i.e request to => auth middlewae (NEXT) => like controller.....
@@ -15,7 +12,7 @@ const auth = async (req, res, next) => {
     let decodedData;
 
     if(token && isCustomAuth) {
-      decodedData = jwt.verify(token, secret);
+      decodedData = jwt.verify(token, 'test');
 
       req.userId = decodedData?.id;
     } else {
