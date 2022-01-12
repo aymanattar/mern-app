@@ -46,7 +46,7 @@ const Form = ({ currentId, setCurrentId }) => {
       </Paper>
     );
 
-  };
+  }
 
   return (
     <Paper className={classes.paper} >
